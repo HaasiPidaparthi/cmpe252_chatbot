@@ -1,0 +1,499 @@
+version: "2.0"
+stories:
+- story: user asks about Bora Bora
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: continue
+  - action: utter_welcome_message
+  - action: utter_main_menu
+  - intent: about_bora_bora
+  - action: utter_about_bora_bora
+  - intent: reaction
+  - action: utter_main_menu
+- story: user asks for contact details
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: continue
+  - action: utter_welcome_message
+  - action: utter_main_menu
+  - intent: contact_us
+  - action: utter_contact_us
+  - intent: ask_hours
+  - action: utter_ask_hours
+  - intent: thank_you
+  - action: utter_you_are_welcome
+  - action: utter_main_menu
+- story: user asks for all offered activities
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: continue
+  - action: utter_welcome_message
+  - action: utter_main_menu
+  - intent: activities_offered
+  - action: utter_activity_1
+  - intent: more
+  - action: utter_activity_2
+  - intent: more
+  - action: utter_activity_3
+  - intent: more
+  - action: utter_activity_4
+  - intent: more
+  - action: utter_activity_5
+  - intent: more
+  - action: utter_thats_all
+  - intent: continue
+  - action: utter_main_menu
+  - intent: goodbye
+  - action: utter_goodbye
+- story: user asks for some offered activites
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: continue
+  - action: utter_welcome_message
+  - action: utter_main_menu
+  - intent: activities_offered
+  - action: utter_activity_1
+  - intent: more
+  - action: utter_activity_2
+  - intent: stop
+  - action: utter_affirm
+  - intent: main_menu
+  - action: utter_main_menu
+- story: user asks for plan my trip
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: continue
+  - action: utter_welcome_message
+  - action: utter_main_menu
+  - intent: plan_my_trip
+  - action: trip_form
+  - active_loop: trip_form
+  - slot_was_set:
+    - requested_slot: a_package
+  - slot_was_set:
+    - a_package: family
+  - slot_was_set:
+    - requested_slot: b_island
+  - slot_was_set:
+    - b_island: bora bora
+  - slot_was_set:
+    - requested_slot: c_count
+  - slot_was_set:
+    - c_count: '3'
+  - slot_was_set:
+    - requested_slot: d_nights
+  - slot_was_set:
+    - d_nights: two days
+  - slot_was_set:
+    - requested_slot: e_budget
+  - slot_was_set:
+    - e_budget: any
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_slots_values
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: continue
+  - action: utter_welcome_message
+  - action: utter_main_menu
+  - intent: plan_my_trip
+  - action: trip_form
+  - active_loop: trip_form
+  - slot_was_set:
+    - requested_slot: a_package
+  - slot_was_set:
+    - a_package: family
+  - slot_was_set:
+    - a_package: family
+  - slot_was_set:
+    - requested_slot: b_island
+  - slot_was_set:
+    - b_island: tahiti
+  - slot_was_set:
+    - b_island: tahiti
+  - slot_was_set:
+    - requested_slot: c_count
+  - slot_was_set:
+    - c_count: 5+
+  - slot_was_set:
+    - c_count: 5+
+  - slot_was_set:
+    - requested_slot: d_nights
+  - slot_was_set:
+    - d_nights: no limit
+  - slot_was_set:
+    - d_nights: no limit
+  - slot_was_set:
+    - requested_slot: e_budget
+  - slot_was_set:
+    - e_budget: under $3000
+  - slot_was_set:
+    - e_budget: under $3000
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_slots_values
+  - intent: thank_you
+  - action: utter_you_are_welcome
+  - action: utter_main_menu
+  - intent: about_bora_bora
+  - action: utter_about_bora_bora
+  - intent: reaction
+  - action: utter_main_menu
+  - intent: activities_offered
+  - action: utter_activity_1
+  - intent: more
+  - action: utter_activity_2
+  - intent: more
+  - action: utter_activity_3
+  - intent: more
+  - action: utter_activity_4
+  - intent: more
+  - action: utter_activity_5
+  - intent: more
+  - action: utter_thats_all
+  - intent: continue
+  - action: utter_main_menu
+  - intent: contact_us
+  - action: utter_contact_us
+  - intent: ask_hours
+  - action: utter_ask_hours
+  - intent: thank_you
+  - action: utter_you_are_welcome
+  - action: utter_main_menu
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: continue
+  - action: utter_welcome_message
+  - action: utter_main_menu
+  - intent: plan_my_trip
+  - action: trip_form
+  - active_loop: trip_form
+  - slot_was_set:
+    - requested_slot: a_package
+  - slot_was_set:
+    - a_package: wedding
+  - slot_was_set:
+    - a_package: wedding
+  - slot_was_set:
+    - requested_slot: b_island
+  - slot_was_set:
+    - b_island: raiatea
+  - slot_was_set:
+    - b_island: raiatea
+  - slot_was_set:
+    - requested_slot: c_count
+  - slot_was_set:
+    - c_count: '4'
+  - slot_was_set:
+    - c_count: '4'
+  - slot_was_set:
+    - requested_slot: d_nights
+  - slot_was_set:
+    - d_nights: two weeks
+  - slot_was_set:
+    - d_nights: two weeks
+  - slot_was_set:
+    - requested_slot: e_budget
+  - slot_was_set:
+    - e_budget: over $5000
+  - slot_was_set:
+    - e_budget: over $5000
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_slots_values
+  - intent: thank_you
+  - action: utter_you_are_welcome
+  - action: utter_main_menu
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: continue
+  - action: utter_welcome_message
+  - action: utter_main_menu
+  - intent: plan_my_trip
+  - action: trip_form
+  - active_loop: trip_form
+  - slot_was_set:
+    - requested_slot: a_package
+  - slot_was_set:
+    - a_package: special
+  - slot_was_set:
+    - a_package: special
+  - slot_was_set:
+    - requested_slot: b_island
+  - slot_was_set:
+    - b_island: moorea
+  - slot_was_set:
+    - b_island: moorea
+  - slot_was_set:
+    - requested_slot: c_count
+  - slot_was_set:
+    - c_count: '1'
+  - slot_was_set:
+    - c_count: '1'
+  - slot_was_set:
+    - requested_slot: d_nights
+  - slot_was_set:
+    - d_nights: one week
+  - slot_was_set:
+    - d_nights: one week
+  - slot_was_set:
+    - requested_slot: e_budget
+  - slot_was_set:
+    - e_budget: over $5000
+  - slot_was_set:
+    - e_budget: over $5000
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_slots_values
+
+- story: interactive_story_4
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: continue
+  - action: utter_welcome_message
+  - action: utter_main_menu
+  - intent: plan_my_trip
+  - action: trip_form
+  - active_loop: trip_form
+  - slot_was_set:
+    - requested_slot: a_package
+  - slot_was_set:
+    - a_package: family
+  - slot_was_set:
+    - requested_slot: b_island
+  - slot_was_set:
+    - b_island: bora bora
+  - slot_was_set:
+    - requested_slot: c_count
+  - slot_was_set:
+    - c_count: '2'
+  - slot_was_set:
+    - requested_slot: d_nights
+  - slot_was_set:
+    - d_nights: five days
+  - slot_was_set:
+    - requested_slot: e_budget
+  - slot_was_set:
+    - e_budget: under $3000
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_slots_values
+  - intent: thank_you
+  - action: utter_you_are_welcome
+  - action: utter_main_menu
+  - intent: about_bora_bora
+  - action: utter_about_bora_bora
+  - intent: reaction
+  - action: utter_main_menu
+  - intent: activities_offered
+  - action: utter_activity_1
+  - intent: more
+  - action: utter_activity_2
+  - intent: stop
+  - action: utter_affirm
+  - action: utter_main_menu
+  - intent: contact_us
+  - action: utter_contact_us
+  - intent: ask_hours
+  - action: utter_ask_hours
+  - intent: thank_you
+  - action: utter_you_are_welcome
+  - action: utter_main_menu
+
+- story: interactive_story_5
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: continue
+  - action: utter_welcome_message
+  - action: utter_main_menu
+  - intent: plan_my_trip
+  - action: trip_form
+  - active_loop: trip_form
+  - slot_was_set:
+    - requested_slot: a_package
+  - slot_was_set:
+    - a_package: family
+  - slot_was_set:
+    - requested_slot: b_island
+  - slot_was_set:
+    - b_island: bora bora
+  - slot_was_set:
+    - requested_slot: c_count
+  - slot_was_set:
+    - c_count: '4'
+  - slot_was_set:
+    - requested_slot: d_nights
+  - slot_was_set:
+    - d_nights: no limit
+  - slot_was_set:
+    - requested_slot: e_budget
+  - slot_was_set:
+    - e_budget: any
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_slots_values
+  - intent: thank_you
+  - action: utter_you_are_welcome
+  - action: utter_main_menu
+
+- story: interactive_story_6
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: continue
+  - action: utter_welcome_message
+  - action: utter_main_menu
+  - intent: plan_my_trip
+  - action: trip_form
+  - active_loop: trip_form
+  - slot_was_set:
+    - requested_slot: a_package
+  - slot_was_set:
+    - a_package: family
+  - slot_was_set:
+    - requested_slot: b_island
+  - slot_was_set:
+    - b_island: bora bora
+  - slot_was_set:
+    - requested_slot: c_count
+  - slot_was_set:
+    - c_count: '4'
+  - slot_was_set:
+    - requested_slot: d_nights
+  - slot_was_set:
+    - d_nights: no limit
+  - slot_was_set:
+    - requested_slot: e_budget
+  - slot_was_set:
+    - e_budget: any
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_slots_values
+  - intent: thank_you
+  - action: utter_you_are_welcome
+  - action: utter_main_menu
+  - intent: about_bora_bora
+  - action: utter_about_bora_bora
+  - intent: reaction
+  - action: utter_main_menu
+  - intent: activities_offered
+  - action: utter_activity_1
+  - intent: more
+  - action: utter_activity_2
+  - intent: more
+  - action: utter_activity_3
+  - intent: stop
+  - action: utter_affirm
+  - action: utter_main_menu
+  - intent: contact_us
+  - action: utter_contact_us
+  - intent: ask_hours
+  - action: utter_ask_hours
+  - intent: thank_you
+  - action: utter_you_are_welcome
+  - action: utter_main_menu
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: continue
+  - action: utter_welcome_message
+  - action: utter_main_menu
+  - intent: plan_my_trip
+  - action: trip_form
+
+- story: interactive_story_2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: continue
+  - action: utter_welcome_message
+  - action: utter_main_menu
+  - intent: plan_my_trip
+  - action: trip_form
+  - active_loop: trip_form
+  - slot_was_set:
+    - requested_slot: a_package
+  - slot_was_set:
+    - a_package: luxury
+  - slot_was_set:
+    - requested_slot: b_island
+  - slot_was_set:
+    - b_island: raiatea
+  - slot_was_set:
+    - requested_slot: c_count
+  - slot_was_set:
+    - c_count: '4'
+  - slot_was_set:
+    - requested_slot: d_nights
+  - slot_was_set:
+    - d_nights: five days
+  - slot_was_set:
+    - requested_slot: e_budget
+  - slot_was_set:
+    - e_budget: any
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_slots_values
+  - intent: thank_you
+  - action: utter_you_are_welcome
+  - action: utter_main_menu
+  - intent: about_bora_bora
+  - action: utter_about_bora_bora
+  - intent: reaction
+  - action: utter_main_menu
+  - intent: activities_offered
+  - action: utter_activity_1
+  - intent: more
+  - action: utter_activity_2
+  - intent: stop
+  - action: utter_affirm
+  - action: utter_main_menu
+  - intent: contact_us
+  - action: utter_contact_us
+  - intent: ask_hours
+  - action: utter_ask_hours
+  - intent: thank_you
+  - action: utter_you_are_welcome
+  - action: utter_main_menu
+  - intent: goodbye
+  - action: utter_goodbye

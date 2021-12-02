@@ -1,0 +1,308 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: continue
+  examples: |
+    - great
+    - Go on
+    - What can you do?
+    - How can you help me?
+    - Ok
+    - Great!
+    - ok
+    - sure
+    - fine
+    - show me the menu
+    - oh ok
+    - oh
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: thank_you
+  examples: |
+    - Thank you!
+    - thanks
+    - thank you
+- intent: ask_name
+  examples: |
+    - What is your name?
+    - May I know your name?
+    - Who is helping me today?
+    - What do people call you?
+    - Do you have a name for yourself?
+    - who are you?
+- intent: ask_weather
+  examples: |
+    - What's the weather like today?
+    - Does it look sunny outside today?
+    - Oh, do you mind checking the weather for me please?
+- intent: ask_mood
+  examples: |
+    - How are you doing today?
+    - How's it hanging?
+    - What's up?
+    - How is it going?
+- intent: compliment
+  examples: |
+    - I love Bora Bora Island!
+    - I can't wait to visit bora bora.
+    - This place is great!
+    - I had so much fun the last time I visited.
+- intent: ask_for_representative
+  examples: |
+    - I'd like to speak with a human!
+    - Can you let me speak to your representative?
+    - I want to speak to the customer service.
+    - i want to talk to your representative
+- intent: about_bora_bora
+  examples: |
+    - Where is Bora Bora?
+    - Tell me about bora bora
+    - What can you tell me about Bora Bora?
+    - Is bora bora an island?
+    - What is bora bora known for?
+    - about_bora_bora
+- intent: reaction
+  examples: |
+    - Wow!
+    - That looks so fun!
+    - ohhh that cool!
+    - It looks pretty
+    - I want to go there
+    - amazing!
+    - wow
+    - Wow! That's cool!
+    - That sounds amazing!
+    - cool
+    - nice place
+    - wow!
+- intent: more
+  examples: |
+    - More
+    - Tell me more
+    - more
+    - I want to know more
+    - What else do you have?
+    - What other options do I have?
+    - next
+    - what else?
+    - tell me more
+    - show me more
+    - anything else?
+    - see more
+    - Wow! Show me more!
+    - what else do you offer?
+    - i want to see more
+    - more please
+- intent: contact_us
+  examples: |
+    - How do I contact the agency?
+    - I want to contact the representative.
+    - I want to talk to a human.
+    - What time are you open?
+    - contact_us
+- intent: ask_hours
+  examples: |
+    - When does the office open?
+    - What are your hours of operation?
+    - How late are you open?
+    - What's the latest you are open?
+    - How early do you open?
+    - What are the hours you're open?
+    - what time are you open?
+    - what are you hours?
+    - What time can I call?
+    - what time should I call?
+    - what time can I call?
+    - what are the hours?
+    - what are your hours?
+    - hours
+- intent: stop
+  examples: |
+    - That's enough
+    - stop
+    - take me back to the menu
+    - I don't want to know anymore
+    - enough
+- intent: plan_my_trip
+  examples: |
+    - plan my trip
+    - I want to plan my trip
+    - Help me plan my trip.
+    - plan_my_trip
+- intent: package
+  examples: |
+    - I want to book the [Special](package) please.
+    - I will go with [Family](package).
+    - The [Adventure](package) sounds fun. I want to book that.
+    - Oh! I will take the [Cruise](package) one.
+    - I am coming there for my [Honeymoon](package), so I will take that package.
+    - I want to throw a bachelorette party! So I will take the [Special](package).
+    - I am down to have [Adventure](package). Book that package for me.
+    - I want to suprise my wife with candle light dinner by the beach. I will take [Special](package).
+    - I really need some relax time. I will book the [Vacation](package).
+    - I will book the [Wedding](package) package! I can't wait to have my wedding there!
+    - There are so many [Festivals and Events](package) going on at the islands. I want to go see them all!
+    - I am planning to take the [Luxury](package). I will have the best time of my life!
+    - There are so many things to do at Bora Bora. I will take the [Adventure](package).
+    - I cannot wait to go on [Adventure](package). Can you add that package for me?
+    - Hey, can you book that [Family](package) one please. Thank you!
+    - [Vacation](package) sounds nice.
+    - [Luxury](package)
+    - The [Festivals and Events](package) one.
+    - Can I book the [Wedding](package) please?
+    - I am coming for the [Honeymoon](package) one.
+    - I want [Family](package) for everyone at home.
+    - Book the [Special](package).
+    - [family](package)
+    - [vacation](package)
+    - [wedding](package)
+    - [special](package)
+    - [cruise](package)
+    - [honeymoon](package)
+    - [luxury](package)
+- intent: island
+  examples: |
+    - I heard [Bora Bora](island) is good. I will go there.
+    - Can I get the [Tahiti](island) one.
+    - I will go to [Moorea](island).
+    - Book [Huahine](island).
+    - [Raiatea](island)
+    - [tahiti](island)
+    - [huahine](island)
+    - [raiatea](island)
+    - [moorea](island)
+    - bora bora
+    - bora broa
+    - [bora bora](island)
+    - [raiatea](island)
+- intent: count
+  examples: |
+    - I will go with [1](count).
+    - [2](count)
+    - I am visting with [5+](count) people.
+    - I am coming with my wife, so I will book [3](count).
+    - [5+](count) cause we are a big family.
+    - I want to talk my parents. I will book [4](count).
+    - [5+](count)
+    - [3](count)
+    - [4](count)
+- intent: nights
+  examples: |
+    - [two weeks](nights)
+    - I dont know when I want to come back, so [no limit](nights).
+    - I can only stay for [one week](nights) nights.
+    - I will book for [two days](nights).
+    - Not sure. Maybe [onw week](nights) nights.
+    - If I go, I might not leave again haha. I will take [no limit](nights).
+    - [five days](nights)
+    - [one week](nights)
+    - [two days](nights)
+    - [no limit](nights)
+    - [five days](nights)
+- intent: budget
+  examples: |
+    - Hmm...I can only spend [Under $3000](budget).
+    - I am rich, make that [Over $5000](budget).
+    - Not sure, maybe around [$3000 - $5000](budget).
+    - I am fine with [Any](budget).
+    - I am planning to spend all my money there! [Over $5000](budget).
+    - [Any](budget)
+    - [under $3000](budget)
+    - [$3000-$5000](budget)
+    - [over $5000](budget)
+    - [any](budget)
+    - [any](budget)
+- intent: activities_offered
+  examples: |
+    - activites offered
+    - what activites do you have?
+    - What can I do on my trip?
+    - Tell me what exciting stuff you guys have to offer.
+    - activities_offered
+- intent: main_menu
+  examples: |
+    - Show me the main menu
+    - Take me to the menu
+    - What's the menu?
+    - menu
+    - main menu
+    - show me the menu please

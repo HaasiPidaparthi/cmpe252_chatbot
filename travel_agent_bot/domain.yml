@@ -1,0 +1,314 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- reaction:
+    use_entities: true
+- package:
+    use_entities: true
+- continue:
+    use_entities: true
+- island:
+    use_entities: true
+- thank_you:
+    use_entities: true
+- activities_offered:
+    use_entities: true
+- more:
+    use_entities: true
+- ask_hours:
+    use_entities: true
+- contact_us:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- greet:
+    use_entities: true
+- nights:
+    use_entities: true
+- budget:
+    use_entities: true
+- plan_my_trip:
+    use_entities: true
+- stop:
+    use_entities: true
+- count:
+    use_entities: true
+- about_bora_bora:
+    use_entities: true
+- main_menu:
+    use_entities: true
+- nlu_fallback:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- ask_name:
+    use_entities: true
+- ask_weather:
+    use_entities: true
+- ask_mood:
+    use_entities: true
+- compliment:
+    use_entities: true
+- ask_for_representative:
+    use_entities: true
+entities:
+- budget
+- count
+- island
+- nights
+- package
+slots:
+  a_package:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  b_island:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  c_count:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  d_nights:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  e_budget:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  requested_slot:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+responses:
+  utter_greet:
+  - text: |-
+      Hello Traveler!
+      Welcome to Bora Bora, the Jewel of the South Seas! I am BoBo, a Travel-Agent Bot here to guide you to make the best of your Bora Bora trip.
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  - text: Fantastic!
+  utter_goodbye:
+  - text: Have a great day! We hope to see you at Bora Bora soon!
+  - text: It was great talking to you :)
+  utter_iamabot:
+  - text: I am a Travel-Agent Bot.
+  utter_affirm:
+  - text: Got it!
+  - text: Understood.
+  utter_you_are_welcome:
+  - text: You are welcome!
+  - text: No worries :)
+  - text: Glad I could help you!
+  utter_welcome_message:
+  - text: I am excited to assist you with your travel arrangements.
+  utter_main_menu:
+  - buttons:
+    - payload: plan_my_trip
+      title: Plan My Trip
+    - payload: about_bora_bora
+      title: About Bora Bora Island
+    - payload: activities_offered
+      title: Activities Offered
+    - payload: contact_us
+      title: Contact Us
+    text: 'Are you ready to experience a tropical paradise? Here are some options you can choose from:'
+  utter_ask_name:
+  - text: My name is BoBo. I am a travel agent bot for the Bora Bora Islands. Nice to meet you!
+  - text: I am BoBo!
+  - text: I am BoBo. What is your name?
+  utter_ask_weather:
+  - text: It is a fine weather here in Bora Bora with the temperatures in mid-70sto mid-80s.
+  utter_ask_mood:
+  - text: Great!
+  - text: Same old, sam old.
+  - text: Ah, can't complain.
+  - text: I am just a bot with no feelings.
+  utter_positive_island_review:
+  - text: That is fantastic!
+  - text: Nice!
+  - text: Me too :)
+  - text: I love Bora Bora too!!
+  - text: That makes the two of us.
+  utter_ask_representative:
+  - text: Sorry I couldn't be of much assistance! I will transfer the chat our representative.
+  - text: Ok, I will put the representative on the line.
+  utter_about_bora_bora:
+  - image: https://www.conradboraboranuiresort.com/wp-content/uploads/2019/04/resort-exterior-1920x1200-1-1024x640.jpg
+    text: Bora Bora is a small South Pacific island northwest of Tahiti in French Polynesia. Surrounded by sand-fringed motus (islets) and a turquoise lagoon protected by a coral reef, it’s known for its scuba diving. It's also a popular luxury resort destination where some guest bungalows are perched over the water on stilts.
+  utter_contact_us:
+  - text: You can contact our operations team at 123-456-7890.
+  - text: You can talk to our representative at 123-456-7890
+  - text: Reach out to us at 123-456-7890.
+  utter_ask_hours:
+  - text: Our operational team is open Monday-Friday 8am-5pm @ local time, but I am available 24/7.
+  - text: We are open Monday-Friday between 8am to 5pm! But I am always here for assistance :)
+  utter_ask_a_package:
+  - text: |-
+      Great! Lets get started! What package would you like to choose? Here are our available options:
+      - family
+      - vacation
+      - honeymoon
+      - cruise
+      - adventure
+      - wedding
+      - luxury
+      - festivals and events
+      - special
+  utter_ask_b_island:
+  - text: |-
+      You can choose to plan your trip on any of the island below:
+      - bora bora
+      - tahiti
+      - moorea
+      - huahine
+      - raiatea
+  utter_ask_c_count:
+  - text: |-
+      How many people is this trip for?
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5+
+  utter_ask_d_nights:
+  - text: |-
+      How long do you want to stay for your trip?
+      - no limit
+      - two days
+      - five days
+      - one week
+      - two weeks
+  utter_ask_e_budget:
+  - text: |-
+      What is your budget?
+      - any
+      - under $3000
+      - $3000-$5000
+      - over $5000
+  utter_not_available:
+  - text: Sorry, we don't have that option. Please select from the options provided.
+  utter_submit:
+  - text: The form is successfully submitted! We can't wait to see you at the Islands!
+  utter_slots_values:
+  - text: |-
+      Here's a summary of your choices:
+      - Package: {a_package}
+      - Island: {b_island}
+      - Number of People: {c_count}
+      - Number of Nights: {d_nights}
+      - Budget: {e_budget}
+  utter_activity_1:
+  - image: https://www.tahitilegends.com/images1/gallery/BOB-Natura-Discvoery-Cultural-Tour-1200x720_53223.jpg
+    text: |-
+      Island Tour
+      Circle the island with your professional and experienced guide. 
+      Learn the island's legends, discover the American WWII cannons, 
+      visit an ancient temple, and meet a local family who will serve you 
+      fruit from their plantation. You will also visit villages where you 
+      will learn how to make your own sarong and discover the local fauna 
+      of the island as well as several vistas with breathtaking views. 
+      Private tours available as well.
+  utter_activity_2:
+  - image: https://www.tahitilegends.com/images1/gallery/BOB-Shark-and-Ray-1200x720_19753.jpg
+    text: |-
+      Eco Shark & Ray Snorkel Safari
+      Arrive at a vibrant coral garden where you'll have the opportunity to 
+      snorkel in clear and shallow waters. Your guide will then take you to 
+      feed the sharks and stingrays. You`ll be able to get in the water and 
+      swim with them or simply watch from the boat.
+  utter_activity_3:
+  - image: https://www.tahitilegends.com/images1/gallery/BOB-Bloody-Marys-1200x720_21303.jpg
+    text: |-
+      Dinner at the World-Famous Bloody Mary's
+      Experience an evening at the famous Bloody Mary's restaurant.  Often 
+      frequented by celebrities, Blood Mary's is known for its fresh food, 
+      signature cocktails and great ambiance.  You'll enjoy the catch of the 
+      day prepared to your liking, or choose from a selection of fresh dishes 
+      including crab, shrimp, steak, chicken, and vegetarian options.
+  utter_activity_4:
+  - image: https://www.tahitilegends.com/images1/gallery/BOB-Aqua-Safari-1200x720_20013.jpg
+    text: |-
+      Aqua Safari with Helmet
+      Go for a walk underwater with an air-supplied helmet and find yourself 
+      surrounded by tropical fish. This 2-hour excursion includes a boat tour 
+      of Bora Bora and snorkeling in the lagoon. This activity is not permitted 
+      for pregnant women, people with asthma, or anyone unable to walk. Transfers 
+      Included for all resorts except the Four Seasons.
+  utter_activity_5:
+  - image: https://www.tahitilegends.com/images1/gallery/Bora-Bora-Lagoon-Cruise-Raanui-Tours3-1200x720_19723.jpg
+    text: |-
+      Full Day Lagoon Cruise & Motu Tahitian Barbecue
+      Enjoy an unforgettable day as you circle the island of Bora Bora by boat 
+      with a representative of Raanui Tours. You`ll snorkel in the beautiful 
+      coral gardens, watch the graceful stingrays in their natural environment, 
+      and get up close and personal with black tipped reef sharks. This excursion 
+      includes a stop at motu Tapu for a traditional Tahitian barbecue.
+  utter_thats_all:
+  - text: That's all we have.
+  - text: We only have these options available for now.
+  - text: We are adding more options, but these are all we have for now.
+  - text: Hang in there, we are bringing more options soon!
+actions:
+- utter_about_bora_bora
+- utter_activity_1
+- utter_activity_2
+- utter_activity_3
+- utter_activity_4
+- utter_activity_5
+- utter_affirm
+- utter_ask_hours
+- utter_contact_us
+- utter_goodbye
+- utter_greet
+- utter_main_menu
+- utter_slots_values
+- utter_submit
+- utter_thats_all
+- utter_welcome_message
+- utter_you_are_welcome
+- validate_trip_form
+forms:
+  trip_form:
+    required_slots:
+      a_package:
+      - entity: package
+        type: from_entity
+      b_island:
+      - entity: island
+        type: from_entity
+      c_count:
+      - entity: count
+        type: from_entity
+      d_nights:
+      - entity: nights
+        type: from_entity
+      e_budget:
+      - entity: budget
+        type: from_entity
+e2e_actions: []
