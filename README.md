@@ -126,10 +126,10 @@ How to run the chatbot:
  bot: I am excited to assist you with your travel arrangements.
  
  bot: Are you ready to experience a tropical paradise? Here are some options you can choose from:
-      - Plan My Trip
-      - About Bora Bora Island
-      - Activities Offered
-      - Contact Us
+   - Plan My Trip
+   - About Bora Bora Island
+   - Activities Offered
+   - Contact Us
  
  user: about bora bora
  
@@ -150,10 +150,10 @@ How to run the chatbot:
  bot: I am excited to assist you with your travel arrangements.
  
  bot: Are you ready to experience a tropical paradise? Here are some options you can choose from:
-      - Plan My Trip
-      - About Bora Bora Island
-      - Activities Offered
-      - Contact Us
+   - Plan My Trip
+   - About Bora Bora Island
+   - Activities Offered
+   - Contact Us
  
  user: activities offered
  
@@ -221,10 +221,10 @@ How to run the chatbot:
  bot: I am excited to assist you with your travel arrangements.
  
  bot: Are you ready to experience a tropical paradise? Here are some options you can choose from:
-      - Plan My Trip
-      - About Bora Bora Island
-      - Activities Offered
-      - Contact Us
+   - Plan My Trip
+   - About Bora Bora Island
+   - Activities Offered
+   - Contact Us
  
  user: contact us
  
