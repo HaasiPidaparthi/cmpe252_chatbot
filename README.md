@@ -9,7 +9,7 @@ https://rasa.com/docs/rasa/installation
 Prequisites: 
 * Anaconda installed
 
-How to set up this project:
+### **How to set up this project:**
 * Download the github project into your local system. 
 * With in the created virtual environment:
   * Install Rasa using the dependencies found in the dependency.txt file
@@ -18,25 +18,26 @@ How to set up this project:
  pip3 install rasa-x --extra-index-url https://pypi.rasa.com/simple
  ```
 
-How to run the chatbot:
-* In the virtual environment, open the project and run the following commands on the terminal:
-  * Train the chatbot
-    ```
-    rasa train
-    ```
-  * Open a separate terminal and start the action server
-    ```
-    rasa run actions
-    ```
-  * Chat with the bot using rasa shell or rasa x
-    ```
-    rasa shell
-    ```
-    ```
-    rasa x
-    ```
+### **How to run the chatbot:**
+
+In the virtual environment, open the project and run the following commands on the terminal:
+* Train the chatbot
+  ```
+  rasa train
+  ```
+* Open a separate terminal and start the action server
+  ```
+  rasa run actions
+  ```
+* Chat with the bot using rasa shell or rasa x
+  ```
+  rasa shell
+  ```
+  ```
+  rasa x
+  ```
     
- ### Conversation Flow 1: Plan My Trip
+ ## Conversation Flow 1: Plan My Trip
  user: hi
  
  bot: Hello Traveler!
@@ -115,7 +116,7 @@ How to run the chatbot:
  
  bot: You are welcome!
  
- ### Conversation Flow 2: About Bora Bora
+ ## Conversation Flow 2: About Bora Bora
  user: hi
  
  bot: Hello Traveler!
@@ -139,7 +140,7 @@ How to run the chatbot:
  
  user: Wow!
  
- ### Conversation Flow 2: Activities Offered
+ ## Conversation Flow 2: Activities Offered
  user: hi
  
  bot: Hello Traveler!
@@ -210,7 +211,7 @@ How to run the chatbot:
   
   bot: We are adding more options, but these are all we have for now.
   
-  ### Conversation Flow 2: Contact Us
+## Conversation Flow 2: Contact Us
  user: hi
  
  bot: Hello Traveler!
